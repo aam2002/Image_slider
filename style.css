@@ -1,0 +1,105 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#container {
+  padding: 30px;
+}
+
+.images {
+  width: 700px;
+  height: 450px;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.565);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  /* top: 0%;
+  left: -100%; */
+}
+#navContainer {
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+img:not(.active) {
+  top: 0%;
+  left: -100%;
+}
+#navContainer button {
+  padding: 6px 20px;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 4px;
+  font-size: large;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+#navContainer button:hover {
+  background-color: rgb(197, 197, 197);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.322) inset;
+  color: black;
+}
+.navDots {
+  display: flex;
+}
+#navContainer .navDots .dot {
+  height: 15px;
+  width: 15px;
+  margin: 0px 10px;
+  border: 1px solid black;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navContainer .navDots .active {
+  background-color: black;
+}
+@keyframes right1 {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+@keyframes right2 {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+@keyframes left1 {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes left2 {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
